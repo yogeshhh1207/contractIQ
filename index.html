@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ContractIQ</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <a href="index.html"> <i class="fas fa-home sidebar-icons"></i></a>
+            </button>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="fa-solid fa-upload"></i>
+            </button>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" aria-controls="sidebar">
+                <a href="repository.html"> <i class="fa-solid fa-layer-group"></i></a>
+            </button>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" aria-controls="sidebar">
+                <a href="repository.html"> <i class="fas fa-file-alt sidebar-icons"></i></a>
+            </button>
+        </nav>
+    </header>
+<div class="container">
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+        <h2>🚀 ContractIQ</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <label for="persona">Analysis Objective</label>
+        <select id="persona">
+            <option value="contract_specific_risk_&_obligations_analysis">Contract specific Risk & Obligations</option>
+            <option value="single_party_portfolio_analysis">Single Party Portfolio Analysis</option><br>
+            <option value="multiple_parties_comparison_analysis">Multiple Parties Comparison Analysis</option><br>
+            <option value="governing_terms_analysis">Governing Terms Analysis</option><br>
+        </select>
+
+        <label for="persona">Category / AI Model</label>
+        <select id="persona">
+            <option value="transportation_&_logistics">Transportation & Logistics</option>
+            <option value="warehousing_&_storage">Warehousing & Storage</option>
+            <option value="oem_supplier_contracts">OEM Supplier Contracts</option>
+            <option value="customer_contracts">Customer Contracts</option>
+            <option value="employment_&_labor_contracts">Employment & Labor Contracts</option>
+            <option value="technology_&_software_contracts">Technology & Software Contracts</option>
+        </select>
+
+        <label for="sourceImport">Source/Import:</label>
+        <select id="sourceImport" onchange="toggleLinkInput()">
+            <option value="upload">Upload Contract(s)</option>
+            <option value="networkPath">Network Path - SharePoint/Box</option>
+        </select>
+
+        <div id="linkInputBox">
+            <input type="text" id="sharepointLink" placeholder="Enter SharePoint/Box link">
+            <button onclick="navigateToLink()">Go</button>
+        </div>
+
+        <div class="file-upload">
+            <div id="drop-area" class="drop-area">
+                <p>Drag and drop file here</p>
+                <p class="small-text">Limit 200MB per file • PDF</p>
+                <input type="file" id="file-input" hidden>
+                <button id="browse-btn" onclick="document.getElementById('fileInput').click()">Click to Browse Files&nbsp;</button>
+            </div>
+
+            <input type="file" id="fileInput" multiple style="display: none;" onchange="handleFileUpload(event)">
+            <div id="fileList" class="file-list"></div>
+            <button id="analyze-btn">Run Analysis</button>
+            <div id="fileList" class="file-listone"></div>
+        </div>
+    </div>
+</div>
+
+        
+        <div id="analysisResults" class="analysis-results"></div>
+ 
+        <main class="content">
+<section id="intake-process">
+<h1>ContractIQ Analysis</h1>
+<p>Select a persona, upload contracts, and run analysis to get insights.</p>
+</section>
+
+ 
+<section id="analysis-section" class="hidden">
+    
+      <h2>Analysis & Critical Data Insights</h2>
+      <div class="cunt">
+        
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+          <div class="tab" onclick="openTab(event, 'summary')">Summary</div>
+          <div class="tab" onclick="openTab(event, 'commercial')">Commercial Attributes</div>
+          <div class="tab" onclick="openTab(event, 'legal')">Legal Attributes</div>
+          <div class="tab" onclick="openTab(event, 'performance')">Performance Visualization</div>
+        </div>
+
+        <div class="table-container" id="tableContainer">
+          <i class="fas fa-expand expand-icon" onclick="toggleFullScreen()"></i>
+        <!-- Tab: Summary -->
+    <div id="summary" class="tab-content">
+      <div>
+       
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        
+</table>
+      <table>
+        <thead>
+          <tr>
+            <th>Category </th>
+            <th>Type of Contract </th>
+            <th>Contract Coverage</th>
+            <th>Supplier</th>
+            <th>Geographical Scope </th>
+            <th>Contract Scope</th>
+            <th>Effective From</th>
+            <th>Expiry Date</th>
+            <th>Status</th>
+            <th>Auto-renewal</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT Services</td>
+            <td>SOW</td>
+            <td>FedEx Enterprise</td>
+            <td>Dell US</td>
+            <td>US</td>
+            <td>Professional Services AI</td>
+            <td>1-12-2024</td>
+            <td>31-03-2026</td>
+            <td>Active </td>
+            <td>No</td>
+            
+
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>SOW</td>
+            <td>FedEx  </td>
+            <td>Dell US</td>
+            <td>US</td>
+
+            <td>Professional Services (AI & Analytics)</td>
+            <td>07-01-2024
+            </td>
+            <td>30-06-2027
+            </td>
+            <td>Active </td>
+            <td></td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EULA</td>
+            <td>FedEx Enterprise  </td>
+            <td>Dell EMEA</td>
+            <td>US, EMEA</td>
+            <td>Data Management Software Licenses</td>
+            <td>31-12-2022
+              /td>
+            <td>31-12-2024
+            </td>
+            <td>Expired</td>
+            <td>Yes</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EUSA</td>
+            <td>FedEx Ground </td>
+            <td></td>
+            <td>US</td>
+            <td>Networking Infrastructure & Support
+            </td>
+            <td>31-07-2024
+            </td>
+            <td>30-04-2026
+            </td>
+            <td>Active </td>
+            <td></td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>SOW</td>
+            <td>FedEx Frieght  </td>
+            <td>Dell Americas</td>
+            <td>US,Canada</td>
+            <td>Hybrid Cloud Deployment & Support
+            </td>
+            <td>31-01-2025
+            </td>
+            <td>31-08-2028
+            </td>
+            <td>Active </td>
+            <td>Yes</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>SOW</td>
+            <td>FedEx Services </td>
+            <td></td>
+            <td>US</td>
+            <td>Storage Solutions & Managed Services
+            </td>
+            <td>31-12-2023
+            </td>
+            <td>20-09-2025
+            </td>
+            <td>Active </td>
+            <td>No</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>SOW</td>
+            <td>FedEx  </td>
+            <td>Dell Asia</td>
+            <td>APAC</td>
+            <td>IT Support & Maintenance Services
+            </td>
+            <td>31-03-2024
+            </td>
+            <td>20-05-2025
+            </td>
+            <td>Active </td>
+            <td>Yes</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EULA</td>
+            <td>FedEx Freight </td>
+            <td>Dell Latin</td>
+            <td>US, LATAM</td>
+            <td>Software Licenses (Compliance & Security)
+            </td>
+            <td>23-02-2025
+            </td>
+            <td>12-04-2026
+            </td>
+            <td>Active </td>
+            <td>Yes</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EUSA</td>
+            <td>FedEx  </td>
+            <td>Dell Global</td>
+            <td>Global</td>
+            <td>Global Software Agreement & Support
+            </td>
+            <td>31-03-2025
+            </td>
+            <td>31-08-2029
+            </td>
+            <td>Active </td>
+            <td>No</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>SOW</td>
+            <td>FedEx Enterprise  </td>
+            <td>Dell US</td>
+            <td>US</td>
+            <td>Servers Procurement & Maintenance
+            </td>
+            <td>30-11-2024
+            </td>
+            <td>30-06-2027
+            </td>
+            <td>Active </td>
+            <td></td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EUSA</td>
+            <td>FedEx Enterprise  </td>
+            <td></td>
+            <td>US, EMEA</td>
+            <td>Cybersecurity Services (Vulnerability Mgmt)
+            </td>
+            <td>15-12-2024
+            </td>
+            <td>30-11-2028
+            </td>
+            <td>Active </td>
+            <td>No</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EUSA</td>
+            <td>FedEx  </td>
+            <td></td>
+            <td>US, EMEA, APAC</td>
+            <td>Managed Detection and Response (MDR)
+            </td>
+            <td>20-12-2024
+            </td>
+            <td>31-10-2026
+            </td>
+            <td>Active </td>
+            <td>Yes</td>
+           
+          </tr>
+          <tr>
+            <td>IT - Services</td>
+            <td>EULA</td>
+            <td>FedEx Enterprise </td>
+            <td></td>
+            <td>Global</td>
+            <td>Microsoft Azure Cloud Services
+            </td>
+            <td>14-07-2024
+            </td>
+            <td>15-01-2027
+            </td>
+            <td>Active </td>
+            <td>Yes</td>
+           
+          </tr>
+          
+          <!-- Additional rows as needed -->
+        </tbody>
+      </table>
+      </div>
+        
+        <p>Filters: [Select start & end dates, etc.]</p>
+      </div>
+
+      <div id="summary" class="tab-content">
+        <div class="tab" onclick="openTab(event, 'summary')">Contract-ID</div>
+        <div class="dashboard">
+          <div class="card">
+            <h3>New Contracts</h3>
+            <p>50</p>
+          </div>
+
+          <div class="card">
+            <h3>Renewals More</h3>
+            <p>6</p>
+          </div>
+          <div class="card">
+            <h3>Value</h3>
+            <p>$1000K</p>
+          </div>
+        </div>
+        <p>Filters: [Select start & end dates, etc.]</p>
+      </div>
+
+      <!-- Tab: Commercial Attributes -->
+    <div id="commercial" class="tab-content">
+      
+      <table>
+        <thead>
+          <tr>
+           
+            <th>Total Contract Value</th>
+            <th>Payment Terms</th>
+            <th>Early Payment Discount % </th>
+            <th>Late Payment Penalty%</th>
+            <th>Volume based Discounts %</th>
+            <th>Annual Price Increase %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           
+            <td>$52,50,785 </td>
+            <td>Net 60</td>
+            <td>NIL</td>
+            <td>1.50%</td>
+            <td>5% for spend > $3M</td>
+            <td>CPI + 1.5%</td>
+
+          
+          </tr>
+          <tr>
+            
+            <td>$69,53,977 </td>
+            <td>Net 60</td>
+            <td>NIL</td>
+            <td>1.50%</td>
+            <td>5% for spend > $3M</td>
+            <td>CPI + 1.5%</td>
+          </tr>
+          <tr>
+            
+            <td>$24,00,000 </td>
+            <td>Net 45</td>
+            <td>1.25% within 20 days
+            </td>
+            <td>1%</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            
+            <td>$47,50,000 </td>
+            <td>Net 60</td>
+            <td>1% within 10 days
+            </td>
+            <td>1.50%</td>
+            <td>8% for equipment > $1M
+            </td>
+            <td>CPI </td>
+          </tr>
+          <tr>
+            
+            <td>$62,00,202</td>
+            <td>Net 60</td>
+            <td></td>
+            <td></td>
+            <td>7% for spend > $5M
+            </td>
+            <td>CPI </td>
+          </tr>
+          <tr>
+            
+            <td>$18,50,000 </td>
+            <td>Net 45</td>
+            <td>NIL</td>
+            <td>1%</td>
+            <td>4% for equipment > $5 M
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            
+            <td>$33,09,753</td>
+            <td>Net 45</td>
+            <td>0.2% within 15 days
+            </td>
+            <td>1%</td>
+            <td></td>
+            <td>CPI - 1%</td>
+          </tr>
+          <tr>
+            
+            <td>$12,75,050 </td>
+            <td>Net 30</td>
+            <td></td>
+            <td></td>
+            <td>5% over 15000 licenses
+            </td>
+            <td>CPI </td>
+          </tr>
+          <tr>
+            
+            <td>$75,00,060 </td>
+            <td>Net 60</td>
+            <td>0.2% within 15 days
+            </td>
+            <td>1.50%</td>
+            <td>10% for spend > $6M
+            </td>
+            <td>CPI + .6%</td>
+          </tr>
+          <tr>
+            
+            <td>$44,09,850 </td>
+            <td>Net 60</td>
+            <td>NIL</td>
+            <td></td>
+            <td>8% for spend > $2M
+            </td>
+            <td>CPI + 0.25%</td>
+          </tr>
+          <tr>
+            
+            <td>$27,50,075 </td>
+            <td>Net 45</td>
+            <td>1.5% within 15 days
+            </td>
+            <td>1.25%</td>
+            <td>6% for annual spend > $2M
+            </td>
+            <td>CPI </td>
+          </tr>
+          <tr>
+            
+            <td>$39,50,040 </td>
+            <td>Net 45</td>
+            <td></td>
+            <td>1.25%</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            
+            <td>$82,50,070 </td>
+            <td>Net 60</td>
+            <td>.625% within 15 days
+            </td>
+            <td>1.50%</td>
+            <td>10% for spend > $7M
+            </td>
+            <td>CPI + 1%</td>
+          </tr>
+
+          
+          <!-- Additional rows as needed -->
+        </tbody>
+      </table>
+      <p>[Click on a row to see more details]</p>
+    </div>
+
+      
+      <!-- Tab: Legal Attributes -->
+      <div id="legal" class="tab-content">
+        
+      <table>
+        <thead>
+          <tr>
+          
+            <th>Right to Indemnify</th>
+            <th>Right to Assign</th>
+            <th>Right to Terminate</th>
+            <th>Governing Law</th>
+            <th>Liability Limit</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td>TCV/ Higher or unl fdir IP/Conf</td>
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>UK</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Singapore</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Delaware</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Tennessee</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>UK</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Delaware</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Singapore</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Delaware</td>
+            <td></td>
+            
+          </tr>
+
+
+          
+          <!-- Additional rows as needed -->
+        </tbody>
+      </table>
+      <p>[Click on a row to see more details]</p>
+  
+      </div>
+  
+      <!-- Tab: Performance Visualization -->
+      <div id="performance" class="tab-content">
+
+          <table>
+            <thead>
+              <tr>
+              
+                <th>Demand</th>
+                <th>Invoice Paid</th>
+                <th>SLA</th>
+                <th>Risk Scores</th>
+                
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              
+                <td>NA</td>
+                <td></td>
+                <td>97.5%</td>
+                <td>24</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>94.9%</td>
+                <td>37</td>
+    
+              </tr>
+              <tr>
+              
+                <td>^ 76%</td>
+                <td></td>
+                <td>96.5%</td>
+                <td>49</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>97.1%</td>
+                <td>64</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>98.2%</td>
+                <td>75</td>
+    
+              </tr>
+              <tr>
+              
+                <td>NA</td>
+                <td></td>
+                <td>99.9%</td>
+                <td>47</td>
+    
+              </tr>
+              <tr>
+              
+                <td>^ 84%</td>
+                <td></td>
+                <td>97.9%</td>
+                <td>31</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>91.9%</td>
+                <td>35</td>
+    
+              </tr>
+              <tr>
+              
+                <td>^ 110%</td>
+                <td></td>
+                <td>100.0%</td>
+                <td>90</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>100.0%</td>
+                <td>57</td>
+    
+              </tr>
+              <tr>
+              
+                <td></td>
+                <td></td>
+                <td>94.9%</td>
+                <td>43</td>
+    
+              </tr>
+              <tr>
+              
+                <td>^ 88%</td>
+                <td></td>
+                <td>96.3%</td>
+                <td>66<td>
+    
+              </tr>
+
+              </tbody>
+              </table>
+              </div>
+          
+    
+    </div>
+    
+
+    <script>
+        function openTab(event, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tab-content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tab");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+          }
+          document.getElementById(tabName).style.display = "block";
+          event.currentTarget.classList.add("active");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          // Open default tab
+          document.getElementsByClassName("tab")[0].click();
+          // Accordion functionality
+          var accHeaders = document.getElementsByClassName("accordion-header");
+          for (let i = 0; i < accHeaders.length; i++) {
+            accHeaders[i].addEventListener("click", function () {
+              var content = this.nextElementSibling;
+              content.style.display = (content.style.display === "block") ? "none" : "block";
+            });
+          }
+        });
+      </script>
+      
+<button id="new-btn"><a href ="repository.html" >Save Analysis</a></button>
+</section>
+ 
+<section id="storage-section" class="hidden">
+<h1>📂 Saved Analyses</h1>
+<p>Access previously analyzed contracts.</p>
+<ul id="saved-files"></ul>
+</section>
+</main>
+</div>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+{
+  "summary": [
+    {
+      "category": "IT Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx Enterprise",
+      "supplier": "Dell US",
+      "geographicalScope": "US",
+      "contractScope": "Professional Services AI",
+      "effectiveFrom": "1-12-2024",
+      "expiryDate": "31-03-2026",
+      "status": "Active",
+      "autoRenewal": "No"
+    },
+    {
+      "category": "IT - Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx",
+      "supplier": "Dell US",
+      "geographicalScope": "US",
+      "contractScope": "Professional Services (AI & Analytics)",
+      "effectiveFrom": "07-01-2024",
+      "expiryDate": "30-06-2027",
+      "status": "Active",
+      "autoRenewal": ""
+    },
+    {
+      "category": "IT - Services",
+      "type": "EULA",
+      "contractCoverage": "FedEx Enterprise",
+      "supplier": "Dell EMEA",
+      "geographicalScope": "US, EMEA",
+      "contractScope": "Data Management Software Licenses",
+      "effectiveFrom": "31-12-2022",
+      "expiryDate": "31-12-2024",
+      "status": "Expired",
+      "autoRenewal": "Yes"
+    },
+    {
+      "category": "IT - Services",
+      "type": "EUSA",
+      "contractCoverage": "FedEx Ground",
+      "supplier": "",
+      "geographicalScope": "US",
+      "contractScope": "Networking Infrastructure & Support",
+      "effectiveFrom": "31-07-2024",
+      "expiryDate": "30-04-2026",
+      "status": "Active",
+      "autoRenewal": ""
+    },
+    {
+      "category": "IT - Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx Frieght",
+      "supplier": "Dell Americas",
+      "geographicalScope": "US,Canada",
+      "contractScope": "Hybrid Cloud Deployment & Support",
+      "effectiveFrom": "31-01-2025",
+      "expiryDate": "31-08-2028",
+      "status": "Active",
+      "autoRenewal": "Yes"
+    },
+    {
+      "category": "IT - Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx Services",
+      "supplier": "",
+      "geographicalScope": "US",
+      "contractScope": "Storage Solutions & Managed Services",
+      "effectiveFrom": "31-12-2023",
+      "expiryDate": "20-09-2025",
+      "status": "Active",
+      "autoRenewal": "No"
+    },
+    {
+      "category": "IT - Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx",
+      "supplier": "Dell Asia",
+      "geographicalScope": "APAC",
+      "contractScope": "IT Support & Maintenance Services",
+      "effectiveFrom": "31-03-2024",
+      "expiryDate": "20-05-2025",
+      "status": "Active",
+      "autoRenewal": "Yes"
+    },
+    {
+      "category": "IT - Services",
+      "type": "EULA",
+      "contractCoverage": "FedEx Freight",
+      "supplier": "Dell Latin",
+      "geographicalScope": "US, LATAM",
+      "contractScope": "Software Licenses (Compliance & Security)",
+      "effectiveFrom": "23-02-2025",
+      "expiryDate": "12-04-2026",
+      "status": "Active",
+      "autoRenewal": "Yes"
+    },
+    {
+      "category": "IT - Services",
+      "type": "EUSA",
+      "contractCoverage": "FedEx",
+      "supplier": "Dell Global",
+      "geographicalScope": "Global",
+      "contractScope": "Global Software Agreement & Support",
+      "effectiveFrom": "31-03-2025",
+      "expiryDate": "31-08-2029",
+      "status": "Active",
+      "autoRenewal": "No"
+    },
+    {
+      "category": "IT - Services",
+      "type": "SOW",
+      "contractCoverage": "FedEx Enterprise",
+      "supplier": "Dell US",
+      "geographicalScope": "US",
+      "contractScope": "Servers Procurement & Maintenance",
+      "effectiveFrom": "30-11-2024",
+      "expiryDate": "30-06-2027",
+      "status": "Active",
+      "autoRenewal": ""
+    },
+    {
+      "category": "IT - Services",
+      "type": "EUSA",
+      "contractCoverage": "FedEx Enterprise",
+      "supplier": "",
+      "geographicalScope": "US, EMEA",
+      "contractScope": "Cybersecurity Services (Vulnerability Mgmt)",
+      "effectiveFrom": "15-12-2024",
+      "expiryDate": "30-11-2028",
+      "status": "Active",
+      "autoRenewal": "No"
+    },
+    {
+      "category": "IT - Services",
+      "type": "EUSA",
+      "contractCoverage": "FedEx",
+      "supplier": "",
+      "geographicalScope": "US, EMEA, APAC",
+      "contractScope": "Managed Detection and Response (MDR)",
+      "effectiveFrom": "20-12-2024",
+      "expiryDate": "31-10-2026",
+      "status": "Active",
+      "autoRenewal": "Yes"
+    },
+    {
+      "category": "IT - Services",
+      "type": "EULA",
+      "contractCoverage": "FedEx Enterprise",
+      "supplier": "",
+      "geographicalScope": "Global",
+      "contractScope": "Microsoft Azure Cloud Services",
+      "effectiveFrom": "14-07-2024",
+      "expiryDate": "15-01-2027",
+      "status": "Active",
+      "autoRenewal": "Yes"
+    }
+  ],
+  "commercial": [
+    {
+      "totalContractValue": "$52,50,785",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "NIL",
+      "latePaymentPenalty": "1.50%",
+      "volumeBasedDiscounts": "5% for spend > $3M",
+      "annualPriceIncrease": "CPI + 1.5%"
+    },
+    {
+      "totalContractValue": "$69,53,977",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "NIL",
+      "latePaymentPenalty": "1.50%",
+      "volumeBasedDiscounts": "5% for spend > $3M",
+      "annualPriceIncrease": "CPI + 1.5%"
+    },
+    {
+      "totalContractValue": "$24,00,000",
+      "paymentTerms": "Net 45",
+      "earlyPaymentDiscount": "1.25% within 20 days",
+      "latePaymentPenalty": "1%",
+      "volumeBasedDiscounts": "",
+      "annualPriceIncrease": ""
+    },
+    {
+      "totalContractValue": "$47,50,000",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "1% within 10 days",
+      "latePaymentPenalty": "1.50%",
+      "volumeBasedDiscounts": "8% for equipment > $1M",
+      "annualPriceIncrease": "CPI"
+    },
+    {
+      "totalContractValue": "$62,00,202",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "",
+      "latePaymentPenalty": "",
+      "volumeBasedDiscounts": "7% for spend > $5M",
+      "annualPriceIncrease": "CPI"
+    },
+    {
+      "totalContractValue": "$18,50,000",
+      "paymentTerms": "Net 45",
+      "earlyPaymentDiscount": "NIL",
+      "latePaymentPenalty": "1%",
+      "volumeBasedDiscounts": "4% for equipment > $5 M",
+      "annualPriceIncrease": ""
+    },
+    {
+      "totalContractValue": "$33,09,753",
+      "paymentTerms": "Net 45",
+      "earlyPaymentDiscount": "0.2% within 15 days",
+      "latePaymentPenalty": "1%",
+      "volumeBasedDiscounts": "",
+      "annualPriceIncrease": "CPI - 1%"
+    },
+    {
+      "totalContractValue": "$12,75,050",
+      "paymentTerms": "Net 30",
+      "earlyPaymentDiscount": "",
+      "latePaymentPenalty": "",
+      "volumeBasedDiscounts": "5% over 15000 licenses",
+      "annualPriceIncrease": "CPI"
+    },
+    {
+      "totalContractValue": "$75,00,060",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "0.2% within 15 days",
+      "latePaymentPenalty": "1.50%",
+      "volumeBasedDiscounts": "10% for spend > $6M",
+      "annualPriceIncrease": "CPI + .6%"
+    },
+    {
+      "totalContractValue": "$44,09,850",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": "NIL",
+      "latePaymentPenalty": "",
+      "volumeBasedDiscounts": "8% for spend > $2M",
+      "annualPriceIncrease": "CPI + 0.25%"
+    },
+    {
+      "totalContractValue": "$27,50,075",
+      "paymentTerms": "Net 45",
+      "earlyPaymentDiscount": "1.5% within 15 days",
+      "latePaymentPenalty": "1.25%",
+      "volumeBasedDiscounts": "6% for annual spend > $2M",
+      "annualPriceIncrease": "CPI"
+    },
+    {
+      "totalContractValue": "$39,50,040",
+      "paymentTerms": "Net 45",
+      "earlyPaymentDiscount": "",
+      "latePaymentPenalty": "1.25%",
+      "volumeBasedDiscounts": "",
+      "annualPriceIncrease": ""
+    },
+    {
+      "totalContractValue": "$82,50,070",
+      "paymentTerms": "Net 60",
+      "earlyPaymentDiscount": ".625% within 15 days",
+      "latePaymentPenalty": "1.50%",
+      "volumeBasedDiscounts": "10% for spend > $7M",
+      "annualPriceIncrease": "CPI + 1%"
+    }
+  ],
+  "legal": [
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": "TCV/ Higher or unl fdir IP/Conf"
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "UK",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Singapore",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Delaware",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Tennessee",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "UK",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Delaware",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Singapore",
+      "liabilityLimit": ""
+    },
+    {
+      "rightToIndemnify": "Yes",
+      "rightToAssign": "No",
+      "rightToTerminate": "Yes",
+      "governingLaw": "Delaware",
+      "liabilityLimit": ""
+    }
+  ],
+  "performance": [
+    {
+      "demand": "NA",
+      "invoicePaid": "",
+      "sla": "97.5%",
+      "riskScores": "24"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "94.9%",
+      "riskScores": "37"
+    },
+    {
+      "demand": "^ 76%",
+      "invoicePaid": "",
+      "sla": "96.5%",
+      "riskScores": "49"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "97.1%",
+      "riskScores": "64"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "98.2%",
+      "riskScores": "75"
+    },
+    {
+      "demand": "NA",
+      "invoicePaid": "",
+      "sla": "99.9%",
+      "riskScores": "47"
+    },
+    {
+      "demand": "^ 84%",
+      "invoicePaid": "",
+      "sla": "97.9%",
+      "riskScores": "31"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "91.9%",
+      "riskScores": "35"
+    },
+    {
+      "demand": "^ 110%",
+      "invoicePaid": "",
+      "sla": "100.0%",
+      "riskScores": "90"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "100.0%",
+      "riskScores": "57"
+    },
+    {
+      "demand": "",
+      "invoicePaid": "",
+      "sla": "94.9%",
+      "riskScores": "43"
+    },
+    {
+      "demand": "^ 88%",
+      "invoicePaid": "",
+      "sla": "96.3%",
+      "riskScores": "66"
+    }
+  ]
+}

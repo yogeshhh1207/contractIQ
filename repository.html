@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis History</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home_app_logo" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=quiz" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ff6600;
+            color: #fff;
+            padding: 12px 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-section {
+            margin-bottom: 20px;
+        }
+
+        .search-section input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-section button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background: #4d148c;
+            color: #fff;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        .search-section button:hover {
+            background: #ff6600;
+        }
+
+        .repo-item {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            position: relative;
+        }
+
+        .repo-item h3 {
+            margin: 0;
+        }
+
+        .repo-item .options {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .repo-item .options button {
+            margin-left: 5px;
+            background: #4d148c;
+            color: #fff;
+            border: none;
+            border-radius: 1rem;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .repo-item .options button:hover {
+            background: #ff6600;
+        }
+
+        a {
+            font-size: 20px;
+        }
+
+        .export-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        #exportButton {
+            margin-left: 5px;
+            background: #4d148c;
+            color: #fff;
+            border: none;
+            border-radius: 1rem;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #exportButton:hover {
+            background-color: #ff6600;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 2px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><span class="material-symbols-outlined">
+                    home_app_logo</span></a>
+            <a href="playbook.html"><span class="material-symbols-outlined">
+                    quiz</span></a>
+        </nav>
+    </header>
+    <h2>Analysis History</h2>
+
+    <div class="container">
+        <div class="search-section">
+            <input type="text" placeholder="Search by Contract ID, Date, Keyword..." />
+            <button>Search</button>
+        </div>
+
+        <!-- Repository Item 1 -->
+        <div class="repo-item">
+            <h3>Dell Contracts – Risk Report</h3>
+            <p>Date: March 25, 2025 | Contracts: 20, Risk Level: Low</p>
+            <div class="options">
+                <button>View Details</button>
+                <div class="export-container">
+                    <button id="exportButton">Export</button>
+                    <div id="exportOptions" class="dropdown-content">
+                        <a href="#" id="exportPDF"><i class="fas fa-file-pdf" style="font-size: 25px; color: red;"></i>
+                            &nbsp;PDF</a>
+                        <a href="#" id="exportCSV"><i class="fas fa-file-csv"
+                                style="font-size: 25px; color: green;"></i> &nbsp;CSV</a>
+                    </div>
+                </div>
+                <button>Share</button>
+
+                <script src="sub/script.js"></script>
+
+            </div>
+        </div>
+
+        <!-- Repository Item 2 -->
+        <div class="repo-item">
+            <h3>Dell Contracts – Risk Report</h3>
+            <p>Date: March 20, 2025 | Contracts: 25, Risk Level: High</p>
+            <div class="options">
+                <button>View Details</button>
+                <div class="export-container">
+                    <button id="exportButton">Export</button>
+                    <div id="exportOptions" class="dropdown-content">
+                        <a href="#" id="exportPDF"><i class="fas fa-file-pdf" style="font-size: 25px; color: red;"></i>
+                            &nbsp;PDF</a>
+                        <a href="#" id="exportCSV"><i class="fas fa-file-csv"
+                                style="font-size: 25px; color: green;"></i> &nbsp;CSV</a>
+                    </div>
+                </div>
+                <button>Share</button>
+
+                <script src="sub/script.js"></script>
+
+            </div>
+        </div>
+        <!-- Additional repository items can be added here -->
+    </div>
+</body>
+
+</html>
